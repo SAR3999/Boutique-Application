@@ -1,0 +1,111 @@
+/* Full screen background with overlay */
+.landing-container {
+  background-image: url('../assets/laxp.jpg');
+  background-size: contain;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content wrapper centered */
+.landing-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center; /* vertical centering */
+}
+
+/* Shop now button */
+#shop-button {
+  background-color: #ffc107;
+  color: #000;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#shop-button:hover {
+  background-color: #e0a800;
+}
+
+/* Login form panel */
+.login-section {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Remove blur on login */
+.login-section.remove-blur {
+  backdrop-filter: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Login form styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.login-form h1 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.login-form select,
+.login-form input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(245, 239, 239, 1);
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  color: rgba(245, 239, 239, 0.9);
+}
+
+.login-form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(13, 110, 253, 0.85);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: rgba(11, 94, 215, 0.95);
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .landing-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-section {
+    width: 400px;
+  }
+}
